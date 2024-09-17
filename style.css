@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #121212;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo i {
+    font-size: 32px;
+    color: #1db954;
+}
+
+.nav-library {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-library i {
+    font-size: 20px;
+    color: #1db954;
+}
+
+.nav-playlist, .nav-podcast {
+    background-color: #242424;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.nav-playlist button, .nav-podcast button, .signup-button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.nav-playlist button:hover, .nav-podcast button:hover, .signup-button:hover {
+    background-color: #1db954;
+    color: #fff;
+}
+
+.nav-playlist button:active, .nav-podcast button:active, .signup-button:active {
+    transform: scale(0.95);
+}
+
+.nav-footer {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-footer a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav-lang-button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.nav-lang-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-lang-button:active {
+    transform: scale(0.95);
+}
+
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    margin-left: 12px;
+    outline: none;
+}
+
+.artists-grid, .albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.artist-card, .album-card {
+    background-color: #181818;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.artist-card:hover, .album-card:hover {
+    background-color: #282828;
+}
+
+.artist-card:active, .album-card:active {
+    transform: scale(0.95);
+}
+
+.artist-card img, .album-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.album-card img {
+    border-radius: 8px;
+}
+
+.artist-card h3, .album-card h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.artist-card p, .album-card p {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.banner {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(90deg, #af2896, #509bf5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    z-index: 1000;
+}
+
+.banner h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.banner p {
+    font-size: 14px;
+}
+
+.banner button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.banner button:hover {
+    background-color: #1db954;
+    color: #fff;
+}
+
+.banner button:active {
+    transform: scale(0.95);
+}
+
